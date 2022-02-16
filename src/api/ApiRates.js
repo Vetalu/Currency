@@ -1,6 +1,6 @@
-export default function ApiRates(dispatch) {
+export default function ApiRates(dispatch, id) {
     const data = new Date()
-    var requestURL = `https://api.exchangerate.host/${data.toISOString().split('T')[0]}?base=USD`;
+    var requestURL = `https://api.exchangerate.host/${data.toISOString().split('T')[0]}?base=${id}`;
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.responseType = 'json';
